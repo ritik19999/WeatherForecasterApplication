@@ -10,10 +10,191 @@
   <title>Weather Forecaster</title>
 </head>
 
-<body>
+<body class="bg-slate-200">
   <header>
-    <h1 class="text-3xl font-bold underline">Helo world</h1>
+    <h1
+      class="text-3xl font-bold flex bg-slate-800 justify-center items-center border-solid border-2 border-slate-600 text-white h-20">
+      Weather
+      Dashboard</h1>
   </header>
+  <main class=" h-full w-screen flex pb-14">
+
+    <section class="mt-5 w-1/3">
+      <div class="flex flex-col">
+        <label class="mt-2 ml-3 font-semibold text-2xl" for="search">Enter a City Name</label>
+
+        <form class="group relative">
+          <svg width="20" height="20" fill="currentColor"
+            class="absolute left-4 top-1/2 -mt-1.5 text-slate-400 pointer-events-none group-focus-within:text-blue-500"
+            aria-hidden="true">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" />
+          </svg>
+          <input
+            class="focus:ring-2 focus:ring-slate-600 focus:outline-none appearance-none w-3/4 text-sm leading-6 text-slate-900 mt-2 ml-2 placeholder-slate-400 rounded-md py-2 pl-10 ring-1 ring-slate-200 shadow-sm"
+            type="text" aria-label="E.g., Lucknow, Delhi, Mumbai" placeholder="E.g., Lucknow, Delhi, Mumbai.">
+        </form>
+        <button class="h-10 px-6 font-semibold rounded-md ml-2 w-3/4 mt-2 bg-slate-800 text-white hover:text-green-400"
+          type="submit">
+          Search
+        </button>
+        <p class="text-center w-3/4 my-2 text-base font-bold text-slate-900">------OR------</p>
+        <button class="h-10 px-6 font-semibold rounded-md ml-2 w-3/4 mt-2 bg-black text-white hover:text-green-400"
+          type="submit">
+          Use Current Location
+        </button>
+      </div>
+    </section>
+    <section id="content-container" class="flex flex-col w-3/4 py-3 pr-6 mr-6 mt-5 ">
+      <div id="main-forecast"
+        class="h-48 border-2 border-solid border-slate-600 rounded-md mb-7 p-4 flex bg-slate-800 shadow-black shadow-xl">
+
+
+        <!-- Searched Location Fetched data display -->
+        <div id="main-forecast-content" class="w-2/3 ">
+          <p>
+            <span class="font-medium text-white text-2xl" id="location">London</span>
+          </p>
+          <p class="my-3">
+            <span class="font-normal text-white text-xl" id="temp">hi hello</span>
+          </p>
+          <p class="my-3">
+            <span class="font-normal text-white text-xl" id="wind">csds</span>
+          </p>
+          <p class="my-3">
+            <span class="font-normal text-white text-xl" id="humidity">FFf</span>
+          </p>
+
+        </div>
+        <div class="w-1/4 content-center"><img src="" alt="Image not found" id="main-forecast-img"></div>
+      </div>
+
+      <!-- Searched Location 6 Days Fetched data display -->
+
+      <!-- day 1 -->
+      <div id="daily-forecast" class="grid grid-flow-row grid-rows-2 grid-cols-3 gap-4">
+        <div
+          class="border-2 border-solid border-slate-600 rounded-md p-4 flex flex-col items-center shadow-black shadow-xl"
+          id="day1">
+          <p>
+            <span class="font-medium text-slate-800 text-2xl" id="date1">London</span>
+          </p>
+          <img src="" alt="weather image not found" id="weatherImg"
+            class="rounded-full bg-black w-14 h-14 block m-auto my-3">
+          <p class="my-1">
+            <span class="font-normal text-black text-xl" id="temp1">hi hello</span>
+          </p>
+          <p class="my-1">
+            <span class="font-normal text-black text-xl" id="wind1">csds</span>
+          </p>
+          <p class="my-1">
+            <span class="font-normal text-black text-xl" id="humidity1">FFf</span>
+          </p>
+        </div>
+
+        <!-- day 2 -->
+        <div
+          class="border-2 border-solid border-slate-600 rounded-md p-4 flex flex-col items-center shadow-black shadow-xl"
+          id="day2">
+          <p>
+            <span class="font-medium text-slate-800 text-2xl" id="date2">London</span>
+          </p>
+          <img src="" alt="weather image not found" id="weatherImg"
+            class="rounded-full bg-black w-14 h-14 block m-auto my-3">
+          <p class="my-1">
+            <span class="font-normal text-black text-xl" id="temp2">hi hello</span>
+          </p>
+          <p class="my-1">
+            <span class="font-normal text-black text-xl" id="wind2">csds</span>
+          </p>
+          <p class="my-1">
+            <span class="font-normal text-black text-xl" id="humidity2">FFf</span>
+          </p>
+        </div>
+        <!-- day 3 -->
+        <div
+          class="border-2 border-solid border-slate-600 rounded-md p-4 flex flex-col items-center shadow-black shadow-xl"
+          id="day3">
+          <p>
+            <span class="font-medium text-slate-800 text-2xl" id="date3">London</span>
+          </p>
+          <img src="" alt="weather image not found" id="weatherImg"
+            class="rounded-full bg-black w-14 h-14 block m-auto my-3">
+          <p class="my-1">
+            <span class="font-normal text-black text-xl" id="temp3">hi hello</span>
+          </p>
+          <p class="my-1">
+            <span class="font-normal text-black text-xl" id="wind3">csds</span>
+          </p>
+          <p class="my-1">
+            <span class="font-normal text-black text-xl" id="humidity3">FFf</span>
+          </p>
+        </div>
+
+        <!-- day 4 -->
+        <div
+          class="border-2 border-solid border-slate-600 rounded-md p-4 flex flex-col items-center shadow-black shadow-xl"
+          id="day4">
+          <p>
+            <span class="font-medium text-slate-800 text-2xl" id="date4">London</span>
+          </p>
+          <img src="" alt="weather image not found" id="weatherImg"
+            class="rounded-full bg-black w-14 h-14 block m-auto my-3">
+          <p class="my-1">
+            <span class="font-normal text-black text-xl" id="temp4">hi hello</span>
+          </p>
+          <p class="my-1">
+            <span class="font-normal text-black text-xl" id="wind4">csds</span>
+          </p>
+          <p class="my-1">
+            <span class="font-normal text-black text-xl" id="humidity4">FFf</span>
+          </p>
+        </div>
+
+
+        <!-- day 5 -->
+        <div
+          class="border-2 border-solid border-slate-600 rounded-md p-4 flex flex-col items-center shadow-black shadow-xl"
+          id="day5">
+          <p>
+            <span class="font-medium text-slate-800 text-2xl" id="date5">London</span>
+          </p>
+          <img src="" alt="weather image not found" id="weatherImg"
+            class="rounded-full bg-black w-14 h-14 block m-auto my-3">
+          <p class="my-1">
+            <span class="font-normal text-black text-xl" id="temp5">hi hello</span>
+          </p>
+          <p class="my-1">
+            <span class="font-normal text-black text-xl" id="wind5">csds</span>
+          </p>
+          <p class="my-1">
+            <span class="font-normal text-black text-xl" id="humidity5">FFf</span>
+          </p>
+        </div>
+        <!-- day 6 -->
+        <div
+          class="border-2 border-solid border-slate-600 rounded-md p-4 flex flex-col items-center shadow-black shadow-xl"
+          id="day6">
+          <p>
+            <span class="font-medium text-slate-800 text-2xl" id="date6">London</span>
+          </p>
+          <img src="" alt="weather image not found" id="weatherImg"
+            class="rounded-full bg-black w-14 h-14 block m-auto my-3">
+          <p class="my-1">
+            <span class="font-normal text-black text-xl" id="temp6">hi hello</span>
+          </p>
+          <p class="my-1">
+            <span class="font-normal text-black text-xl" id="wind6">csds</span>
+          </p>
+          <p class="my-1">
+            <span class="font-normal text-black text-xl" id="humidity6">FFf</span>
+          </p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
   <script src="index.js"></script>
 </body>
 
