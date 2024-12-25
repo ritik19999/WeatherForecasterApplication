@@ -100,7 +100,7 @@ function fiveDaysDataDisplay(city){
     for(let i=1;i<6;i++){
       if (element.dt_txt===`${year}-${month}-${date+i} 12:00:00`) {
         //data display
-        document.querySelector(`#date${j}`).innerHTML= `( ${date+i}/${month}/${year} )`;
+        document.querySelector(`#date${j}`).innerHTML= `(${date+i}/${month}/${year})`;
         document.querySelector(`#temp${j}`).innerHTML=element.main.temp;
         document.querySelector(`#wind${j}`).innerHTML=element.wind.speed;
         document.querySelector(`#humidity${j}`).innerHTML=element.main.humidity;
